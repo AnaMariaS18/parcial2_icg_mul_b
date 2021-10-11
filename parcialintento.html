@@ -1,0 +1,23 @@
+<canvas id="myCanvas" width="600" height="500"></canvas>
+<script>
+		var a = document.getElementById("myCanvas");
+		var gctx = a.getContext("2d");
+		var lingrad = gctx.createLinearGradient(0, 0, 0,300); 
+		lingrad.addColorStop(0, '#000000'); 
+                lingrad.addColorStop(0.9, '#ff0000'); 
+                lingrad.addColorStop(0.1, '#000000'); 
+		gctx.fillStyle = lingrad;
+		gctx.fillRect (110, 10, 130,300); 
+            var lingrad = gctx.createLinearGradient(0, 0, 0,300);
+            lingrad.addColorStop(0, '#000000'); 
+            lingrad.addColorStop(0.9, '#00ff00'); 
+            lingrad.addColorStop(0.1, '#000000'); 
+	    gctx.fillStyle = lingrad;
+	    gctx.fillRect (250, 10, 130,300);
+             var lingrad = gctx.createLinearGradient(0, 0, 0,300);
+             lingrad.addColorStop(0, '#000000'); 
+            lingrad.addColorStop(0.9, '#0000ff'); 
+            lingrad.addColorStop(0.1, '#000000'); 
+	    gctx.fillStyle = lingrad;
+	    gctx.fillRect (390, 10, 130,300);
+         </script>

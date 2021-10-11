@@ -1,0 +1,32 @@
+<input type=text size=2 id='nf'/>
+<button onclick='main()'>Ejecutar</button>
+<canvas id='mycanvas'width=600 height=600></canvas>
+<script>
+	var ctx;
+    
+	function color(r, g ,b){
+		return 'rgba(' + r*2.55 + ',' + g*2.55 +','+ b*2.55 +')'
+	}
+	function main(){
+		var c = document.getElementById('mycanvas')
+		ctx = c.getContext('2d')
+		var nc = parseInt(document.getElementById('nf').value)
+                for(let k =0; k<3 ; k++)
+                {
+                    for(let i=0;i<nc;i++)
+                    {
+                        if(k==0)
+                        {
+                          ctx.fillStyle = color((nc-i)/nc*100,0,0);
+                        }else if (k==1)
+                        {
+                          ctx.fillStyle = color(0,(nc-i)/nc*100,0);
+                        }else if (k==2)
+                        {
+                          ctx.fillStyle = color(0,0,100*(nc-i)/nc);
+                        }
+                    ctx.fillRect(k*100, i*300/nc,100, 300/nc);
+                    }
+                }
+        }
+</script>
